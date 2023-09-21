@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://ci6r0vrjftcgk"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_2hc6q"]
+[ext_resource type="PackedScene" uid="uid://cnkasmuavucbf" path="res://player.tscn" id="1_36dra"]
+[ext_resource type="Script" path="res://Score.gd" id="1_vdpxc"]
+[ext_resource type="PackedScene" uid="uid://cpa7oer1w0sal" path="res://fish.tscn" id="2_daub6"]
+[ext_resource type="PackedScene" uid="uid://cfumby1ylq5nd" path="res://item.tscn" id="3_h8iyd"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_2hc6q")
+
+[node name="Score" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vdpxc")
+
+[node name="label" type="Label" parent="Score"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score"
+
+[node name="value" type="Label" parent="Score"]
+layout_mode = 0
+offset_left = 54.0
+offset_right = 97.0
+offset_bottom = 26.0
+text = "0
+"
+
+[node name="Player" parent="." instance=ExtResource("1_36dra")]
+position = Vector2(181, 506)
+
+[node name="Fish" parent="." instance=ExtResource("2_daub6")]
+position = Vector2(396, 333)
+
+[node name="Fish2" parent="." instance=ExtResource("2_daub6")]
+position = Vector2(266, 229)
+
+[node name="Item" parent="." instance=ExtResource("3_h8iyd")]
+position = Vector2(108, -35)

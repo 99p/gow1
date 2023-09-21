@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpa7oer1w0sal"]
+
+[ext_resource type="Script" path="res://Fish.gd" id="1_6snje"]
+[ext_resource type="Texture2D" uid="uid://dhp7pt33l5wvb" path="res://images/gow3.png" id="2_4n2p0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74goi"]
+size = Vector2(52, 33)
+
+[node name="Fish" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_6snje")
+metadata/_edit_group_ = true
+
+[node name="Gow3" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("2_4n2p0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 3.5)
+shape = SubResource("RectangleShape2D_74goi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
