@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ci6r0vrjftcgk"]
+[gd_scene load_steps=7 format=3 uid="uid://ci6r0vrjftcgk"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_2hc6q"]
 [ext_resource type="PackedScene" uid="uid://cnkasmuavucbf" path="res://player.tscn" id="1_36dra"]
 [ext_resource type="Script" path="res://Score.gd" id="1_vdpxc"]
 [ext_resource type="PackedScene" uid="uid://cpa7oer1w0sal" path="res://fish.tscn" id="2_daub6"]
 [ext_resource type="PackedScene" uid="uid://cfumby1ylq5nd" path="res://item.tscn" id="3_h8iyd"]
+[ext_resource type="PackedScene" uid="uid://djs1canebgbdm" path="res://bullet.tscn" id="6_q5s0h"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_2hc6q")
@@ -41,3 +42,5 @@ position = Vector2(266, 229)
 
 [node name="Item" parent="." instance=ExtResource("3_h8iyd")]
 position = Vector2(108, -35)
+
+[node name="Bullet" parent="." instance=ExtResource("6_q5s0h")]

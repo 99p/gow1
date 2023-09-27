@@ -17,3 +17,5 @@ texture = ExtResource("2_6fkjx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1.5)
 shape = SubResource("RectangleShape2D_pycq0")
+
+[node name="FireRateTimer" type="Timer" parent="."]
